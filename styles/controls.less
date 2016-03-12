@@ -10,25 +10,27 @@
   border-radius: @base-border-radius !important;
   cursor: pointer !important;
   img.content-mask {
-      background-color: @background-tertiary !important;
+    margin-top: -5px;
+    background-color: @background-tertiary !important;
   }
 }
-    .btn-toolbar:hover {
-      background: @background-tertiary !important;
-      img.content-mask {
-          background-color: @background-secondary !important;
-      }
+
+.btn-toolbar:hover {
+  background: @background-tertiary !important;
+  img.content-mask {
+    background-color: @background-secondary !important;
+  }
 }
 
 .mode-false {
+  img.content-mask {
+    background-color: @white !important;
+  }
+  &:hover {
     img.content-mask {
-        background-color: @white !important;
+      background-color: @white !important;
     }
-    &:hover {
-        img.content-mask {
-            background-color: @white !important;
-        }
-    }
+  }
 }
 
 body.platform-win32 {
@@ -58,13 +60,13 @@ body.platform-win32 {
     border-top-left-radius: @base-border-radius !important;
     border-bottom-left-radius: @base-border-radius !important;
     padding-top: 5px;
-  }
-  .primary-item:hover{
+    &:hover {
       background: @background-tertiary !important;
       color: @background-secondary !important;
       img.content-mask {
-          background-color: @background-secondary !important;
+        background-color: @background-secondary !important;
       }
+    }
   }
 
   .secondary-picker {
@@ -75,12 +77,12 @@ body.platform-win32 {
     border-top-right-radius: @base-border-radius !important;
     border-bottom-right-radius: @base-border-radius !important;
     margin-left: -1px !important;
-  }
-  .secondary-picker:hover {
+    &:hover {
       background: @background-tertiary !important;
       img.content-mask {
-          background-color: @background-secondary !important;
+        background-color: @background-secondary !important;
       }
+    }
   }
 
   .secondary-items {
@@ -93,14 +95,13 @@ body.platform-win32 {
           background: @background-primary !important;
         }
       }
-    }
-    .item:hover {
+      &:hover {
         color: @white !important;
+        background: @background-primary !important;
         img.content-mask {
             background-color: @white !important;
         }
-        background: @background-primary !important;
-
+      }
     }
   }
 }
@@ -136,6 +137,10 @@ body.platform-win32 {
       color: @background-secondary !important;
     }
   }
+}
+
+.button-dropdown.bordered .primary-item {
+  padding-top: 0px;
 }
 
 /**
